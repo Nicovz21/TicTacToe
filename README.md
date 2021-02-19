@@ -44,3 +44,7 @@ In this, the boolean that determined who wins ("player1Wins") is then checked to
 NOTE: this is only called when the reset button is pushed, because the onClick in the activity_game.xml for the reset button is set to resetBoard()
 If no boolean is true, then the method does nothing, therefore making the button do nothing
 
+# Rotation of Phone
+This is handled in the GameActivity.java as well as the activty_game.xml. In the xml file, this bit of code is added to every button "android:freezesText="true"". This ensures that the button does not lose the text assigned to it "X" or "O"
+In the GameActivity.java, an onSaveInstance and onRestoreInstance are created. The onSaveInstace saves all data currently on the screen (this means all the x's and o's placed). The onRestoreInstance returns all the data back to the rightful button after the screen has been rotated
+
